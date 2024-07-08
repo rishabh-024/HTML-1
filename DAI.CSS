@@ -1,0 +1,83 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+}
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6347; /* Change color on hover */
+}
+
+.search-bar input {
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 16px;
+    color: inherit;
+    border: 1px solid black;
+    border-radius: inherit;
+}
+
+input[type="search"]::placeholder {
+    color: white;
+  }
+
+input[type="search"]:focus {
+    box-shadow: 0 0 3px 0 #3f69a8;
+    border-color: #3f69a8;
+    outline: none;
+  }
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
